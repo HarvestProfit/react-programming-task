@@ -7,7 +7,7 @@ This project has already been deployed to https://react-programming-challenge.he
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-This project gives you an API to hid that allows you to create/update/manage a few different resources, via an authenticated API.
+This project gives you an API to hit that allows you to create/update/manage a few different resources, via an authenticated API.
 
 You should [Create a React App](https://github.com/facebook/create-react-app) that can:
 - Handle authentication (you can create a user to authenticate with as part of the API)
@@ -20,7 +20,7 @@ Each endpoint is [documented here](https://documenter.getpostman.com/view/258214
 
 # Development
 
-To get up and running in development, you will [this version of Ruby](./.ruby-version) and [this version of Node](./.node-version), as well as [Yarn](https://yarnpkg.com/en/).
+To get up and running in development, you will need [this version of Ruby](./.ruby-version) and [this version of Node](./.node-version), as well as [Yarn](https://yarnpkg.com/en/).
 
 Then run:
 ```bash
