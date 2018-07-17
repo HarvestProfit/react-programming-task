@@ -4,6 +4,14 @@
   "website": "https://www.harvestprofit.com",
   "repository": "https://github.com/HarvestProfit/react-programming-task",
   "logo": "https://www.harvestprofit.com/harvest-profit-icon-1600.jpg",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
   "scripts": {
     "postdeploy": "bundle exec rails db:migrate"
   },
