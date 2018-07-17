@@ -9,7 +9,7 @@ This project has already been deployed to https://react-programming-challenge.he
 
 This projects gives you an API to hid that allows you to create/update/manage a few different resources, via an authenticated API.
 
-You should:
+You should [Create a React App](https://github.com/facebook/create-react-app) that can:
 - Handle authentication (you can create a user to authenticate with as part of the API)
 - Handle the management of a logged in users projects
 - Handle the management of each project's tasks
