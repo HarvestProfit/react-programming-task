@@ -14,7 +14,9 @@ You should [Create a React App](https://github.com/facebook/create-react-app) th
 - Handle the management of a logged in users projects
 - Handle the management of each project's tasks
 
-The API given is a "flat" API. Each endpoint is [documented here](https://documenter.getpostman.com/view/2582145/RWMEMTg7)
+The API given is a relatively "flat" API. We include all `tasks` for a given `project`, to make rendering simpler.
+
+Each endpoint is [documented here](https://documenter.getpostman.com/view/2582145/RWMEMTg7)
 
 # Development
 
