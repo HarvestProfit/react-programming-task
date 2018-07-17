@@ -1,4 +1,7 @@
+![Harvest Profit](https://www.harvestprofit.com/logo.png)
+
 # React Programming Task
+[![codecov](https://codecov.io/gh/HarvestProfit/react-programming-task/branch/master/graph/badge.svg)](https://codecov.io/gh/HarvestProfit/react-programming-task) [![CircleCI](https://circleci.com/gh/HarvestProfit/react-programming-task/tree/master.svg?style=svg)](https://circleci.com/gh/HarvestProfit/react-programming-task/tree/master)
 
 This project has already been deployed to https://react-programming-challenge.herokuapp.com/, however you are free to deploy it under your own Heroku account by clicking this button:
 
