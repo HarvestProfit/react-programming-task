@@ -45,6 +45,14 @@ RSpec.describe UsersController, type: :controller do
         expect(response.content_type).to eq('application/json')
       end
     end
+
+    context "with a duplicate user" do
+      it "renders a JSON response with errors for a user that already exists" do
+        post :create, params: { email: user.email, password: 'password123', password_confirmation: 'password123' }
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(response.content_type).to eq('application/json')
+      end
+    end
   end
 
   describe "PUT #update" do
