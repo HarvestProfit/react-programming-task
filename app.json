@@ -10,7 +10,11 @@
   "env": {
     "RAILS_ENV": "production",
     "RACK_ENV": "production",
-    "RAILS_SERVE_STATIC_FILES": "true"
+    "RAILS_SERVE_STATIC_FILES": "true",
+    "RAILS_MASTER_KEY": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    }
   },
   "addons": ["heroku-postgresql"]
 }
