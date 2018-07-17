@@ -7,14 +7,14 @@ This project has already been deployed to https://react-programming-challenge.he
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-This projects gives you an API to hid that allows you to create/update/manage a few different resources, via an authenticated API.
+This project gives you an API to hid that allows you to create/update/manage a few different resources, via an authenticated API.
 
 You should [Create a React App](https://github.com/facebook/create-react-app) that can:
 - Handle authentication (you can create a user to authenticate with as part of the API)
-- Handle the management of a logged in users projects
+- Handle the management of a logged in user's projects
 - Handle the management of each project's tasks
 
-The API given is a relatively "flat" API. We include all `tasks` for a given `project`, to make rendering simpler.
+The API given is a relatively "flat" API. The big exception is that we include all `tasks` for a given `project` in any `project`-based response, to make rendering simpler.
 
 Each endpoint is [documented here](https://documenter.getpostman.com/view/2582145/RWMEMTg7)
 
