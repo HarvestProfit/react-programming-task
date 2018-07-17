@@ -12,15 +12,11 @@ RSpec.describe UsersController, type: :routing do
     end
 
     it "routes to #update via PUT" do
-      expect(:put => "/api/users/1").to route_to("users#update", :id => "1")
-    end
-
-    it "routes to #update via PATCH" do
-      expect(:patch => "/api/users/1").to route_to("users#update", :id => "1")
+      expect(:put => "/api/users").to route_to("users#update")
     end
 
     it "routes to #destroy" do
-      expect(:delete => "/api/users/1").to route_to("users#destroy", :id => "1")
+      expect(:delete => "/api/users").to route_to("users#destroy")
     end
 
   end
