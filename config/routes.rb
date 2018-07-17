@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'pages#home'
   scope :api do
     post 'login', to: 'login#create'
     resources :tasks
