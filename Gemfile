@@ -38,10 +38,15 @@ gem 'active_model_serializers'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Use codecov to report coverage
+  gem 'codecov', require: false
   # Use factory bot for all model mocks
   gem 'factory_bot_rails'
   # Use rspec for all tests
   gem 'rspec-rails'
+  # Use simplecov to report coverage
+  gem 'simplecov', require: false
+
 end
 
 group :development do
