@@ -166,6 +166,8 @@ GEM
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
+    rspec_junit_formatter (0.4.1)
+      rspec-core (>= 2, < 4, != 2.12.0)
     ruby_dep (1.5.0)
     simplecov (0.16.1)
       docile (~> 1.1)
@@ -215,6 +217,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 5.2.0)
   rspec-rails
+  rspec_junit_formatter
   simplecov
   spring
   spring-watcher-listen (~> 2.0.0)

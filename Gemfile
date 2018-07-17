@@ -44,6 +44,8 @@ group :development, :test do
   gem 'factory_bot_rails'
   # Use rspec for all tests
   gem 'rspec-rails'
+  # Format test output for CircleCI
+  gem 'rspec_junit_formatter'
   # Use simplecov to report coverage
   gem 'simplecov', require: false
 

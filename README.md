@@ -1,6 +1,7 @@
 # React Programming Task
 
 This project has already been deployed to https://react-programming-challenge.herokuapp.com/, however you are free to deploy it under your own Heroku account by clicking this button:
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 This projects gives you an API to hid that allows you to create/update/manage a few different resources, via an authenticated API.
