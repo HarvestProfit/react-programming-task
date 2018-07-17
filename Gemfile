@@ -19,6 +19,8 @@ gem 'webpacker'
 gem 'bcrypt', '~> 3.1.7'
 # JWTs for authentication
 gem 'jwt'
+# Acts as list to handle sorting
+gem 'acts_as_list'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
