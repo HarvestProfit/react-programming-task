@@ -16,5 +16,21 @@ You should [Create a React App](https://github.com/facebook/create-react-app) th
 
 The API given is a "flat" API. Each endpoint is [documented here](https://documenter.getpostman.com/view/2582145/RWMEMTg7)
 
+# Development
+
+To get up and running in development, you will [this version of Ruby](./.ruby-version) and [this version of Node](./.node-version), as well as [Yarn](https://yarnpkg.com/en/).
+
+Then run:
+```bash
+# Install all ruby deps
+bundle install
+# Install all JS deps
+yarn install
+# Generate a new Rails secret
+rails secret
+# Start the development server
+rails s
+```
+
 # License
 This project is [MIT Licensed](./LICENSE.md)
