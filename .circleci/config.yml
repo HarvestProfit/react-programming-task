@@ -14,6 +14,7 @@ jobs:
           PGHOST: 127.0.0.1
           PGUSER: circleci-demo-ruby
           RAILS_ENV: test
+          SECRET_KEY_BASE: 725e8c7d115357087d0edafba62d6f668b58be04510045e6c6d1d197da23c9964020432b475917ccab4ed159185da0e46cf54ddd9f3f01d50f4a22568157ca50
       - image: circleci/postgres:10-alpine
         environment:
           POSTGRES_USER: circleci-demo-ruby
