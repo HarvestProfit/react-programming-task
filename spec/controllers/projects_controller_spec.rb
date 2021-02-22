@@ -13,7 +13,7 @@ RSpec.describe ProjectsController, type: :controller do
       project = create(:project, user: user)
       request.headers.merge! valid_headers
       get :index, params: {}
-      expect(response).to be_success
+      expect(response).to have_http_status(:success)
     end
   end
 
@@ -22,7 +22,7 @@ RSpec.describe ProjectsController, type: :controller do
       project = create(:project, user: user)
       request.headers.merge! valid_headers
       get :show, params: {id: project.id}
-      expect(response).to be_success
+      expect(response).to have_http_status(:success)
     end
   end
 
@@ -46,7 +46,7 @@ RSpec.describe ProjectsController, type: :controller do
         request.headers.merge! valid_headers
         post :create, params: valid_attributes
         expect(response).to have_http_status(:created)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
         expect(response.location).to eq(project_url(Project.last))
       end
     end
@@ -56,7 +56,7 @@ RSpec.describe ProjectsController, type: :controller do
         request.headers.merge! valid_headers
         post :create, params: invalid_attributes
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
       end
     end
   end
@@ -82,7 +82,7 @@ RSpec.describe ProjectsController, type: :controller do
         request.headers.merge! valid_headers
         put :update, params: {id: project.id, name: 'Project 100' }
         expect(response).to have_http_status(:ok)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
       end
     end
 
@@ -92,7 +92,7 @@ RSpec.describe ProjectsController, type: :controller do
         request.headers.merge! valid_headers
         put :update, params: {id: project.id, name: 'Valid name', something: 'Project 100' }
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
       end
     end
   end

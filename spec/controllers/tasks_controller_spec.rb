@@ -13,14 +13,14 @@ RSpec.describe TasksController, type: :controller do
       task = create(:task, project: project)
       request.headers.merge! valid_headers
       get :index, params: {}
-      expect(response).to be_success
+      expect(response).to have_http_status(:success)
     end
 
     it "returns a success response if filtered by project" do
       task = create(:task, project: project)
       request.headers.merge! valid_headers
       get :index, params: { project_id: project.id }
-      expect(response).to be_success
+      expect(response).to have_http_status(:success)
     end
   end
 
@@ -29,7 +29,7 @@ RSpec.describe TasksController, type: :controller do
       task = create(:task, project: project)
       request.headers.merge! valid_headers
       get :show, params: { id: task.id }
-      expect(response).to be_success
+      expect(response).to have_http_status(:success)
     end
   end
 
@@ -50,7 +50,7 @@ RSpec.describe TasksController, type: :controller do
         request.headers.merge! valid_headers
         post :create, params: valid_attributes
         expect(response).to have_http_status(:created)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
         expect(response.location).to eq(task_url(Task.last))
       end
     end
@@ -64,7 +64,7 @@ RSpec.describe TasksController, type: :controller do
         request.headers.merge! valid_headers
         post :create, params: invalid_attributes
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
       end
     end
   end
@@ -84,7 +84,7 @@ RSpec.describe TasksController, type: :controller do
         request.headers.merge! valid_headers
         put :update, params: { id: task.id, name: 'a new name' }
         expect(response).to have_http_status(:ok)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
       end
     end
 
@@ -94,7 +94,7 @@ RSpec.describe TasksController, type: :controller do
         request.headers.merge! valid_headers
         put :update, params: { id: task.id, something: 'ridiculous' }
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
       end
     end
   end
