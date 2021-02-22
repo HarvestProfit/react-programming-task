@@ -11,7 +11,7 @@ RSpec.describe UsersController, type: :controller do
     it "returns a success response" do
       request.headers.merge! valid_headers
       get :index
-      expect(response).to be_success
+      expect(response).to have_http_status(:success)
     end
   end
 
@@ -30,7 +30,7 @@ RSpec.describe UsersController, type: :controller do
       it "renders a JSON response with the new user" do
         post :create, params: valid_attributes
         expect(response).to have_http_status(:created)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
       end
     end
 
@@ -42,7 +42,7 @@ RSpec.describe UsersController, type: :controller do
       it "renders a JSON response with errors for the new user" do
         post :create, params: invalid_attributes
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
       end
     end
 
@@ -50,7 +50,7 @@ RSpec.describe UsersController, type: :controller do
       it "renders a JSON response with errors for a user that already exists" do
         post :create, params: { email: user.email, password: 'password123', password_confirmation: 'password123' }
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
       end
     end
   end
@@ -68,7 +68,7 @@ RSpec.describe UsersController, type: :controller do
         request.headers.merge! valid_headers
         put :update, params: { id: user.id, email: '123test@email.com' }
         expect(response).to have_http_status(:ok)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
       end
     end
 
@@ -77,7 +77,7 @@ RSpec.describe UsersController, type: :controller do
         request.headers.merge! valid_headers
         put :update, params: { id: user.id, name: '123test@email.com' }
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to eq('application/json')
+        expect(response.content_type).to include('application/json')
       end
     end
   end
